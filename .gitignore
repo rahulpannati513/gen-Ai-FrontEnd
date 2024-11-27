@@ -2,7 +2,20 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+
+# Environment Files
 .env
+
+# macOS
 .DS_Store
+
+# Build / Distribution
 dist/
 build/
+
+# IDE Files
+.vscode/
+.idea/
+
+# Logs
+*.log
