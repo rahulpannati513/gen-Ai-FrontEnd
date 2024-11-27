@@ -3,9 +3,9 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - main # Trigger on push to the main branch
+      - main
   pull_request:
-    types: [opened, synchronize, reopened, closed] # Trigger on PR events
+    types: [opened, synchronize, reopened, closed]
     branches:
       - main
 
@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install
 
-      # Build the app (this will create the dist directory by default with Vite)
+      # Build the app (this will create the build directory if you configured Vite to use 'build')
       - name: Build the app
         run: |
           npm run build
@@ -41,7 +41,7 @@ jobs:
           action: "upload"
           app_location: "/" # The location of your source code (relative path, in your case it's the root folder)
           api_location: "" # The location of your API code (empty if not using Azure Functions)
-          output_location: "dist" # The output directory from Vite (typically 'dist')
+          output_location: "build" # The output directory from Vite (change to 'build' if you're using that)
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
