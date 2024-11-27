@@ -41,7 +41,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (PR comments)
           action: "upload"
           app_location: "/" # The location of your source code (relative path, in your case it's the root folder)
-          api_location: "" # The location of your API code (empty if not using Azure Functions)
+          api_location: "api" # The location of your API code (empty if not using Azure Functions)
           output_location: "dist" # The output directory from Vite (typically 'dist')
 
   close_pull_request_job:
