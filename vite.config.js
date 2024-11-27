@@ -8,4 +8,7 @@ export default defineConfig({
     port: 5175, // Set the default port number here
     strictPort: true, // Ensure Vite doesn't try to use another port if 5175 is in use
   },
+  build: {
+    outDir: "build", // Change the build output folder to 'build'
+  },
 });
