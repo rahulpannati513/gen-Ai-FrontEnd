@@ -1,3 +1,4 @@
+Here is the complete workflow file content you can use: yaml
 name: Azure Static Web Apps CI/CD
 
 on:
